@@ -15,9 +15,42 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIH-G9-vvT">
+                                <rect key="frame" x="79" y="111" width="232" height="85"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdu-8H-djY">
+                                <rect key="frame" x="115" y="700" width="160" height="50"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3db-i9-5oZ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="vOF-3D-agC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" systemColor="systemGray6Color"/>
+                                <state key="normal" title="Show  Text"/>
+                                <connections>
+                                    <action selector="takeTheButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="vua-eN-AUw"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="hIH-G9-vvT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D8G-5U-rZE"/>
+                            <constraint firstItem="qdu-8H-djY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GpU-7u-ghc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qdu-8H-djY" secondAttribute="bottom" constant="60" id="Ial-JN-LIE"/>
+                            <constraint firstItem="hIH-G9-vvT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="67" id="k5b-cb-O4t"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="WorldLabel" destination="hIH-G9-vvT" id="M9t-UH-YC2"/>
+                        <outlet property="toggleButton" destination="qdu-8H-djY" id="ycW-g8-e2z"/>
+                        <outlet property="worldLabel" destination="hIH-G9-vvT" id="eZY-UL-8LG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -25,8 +58,11 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
